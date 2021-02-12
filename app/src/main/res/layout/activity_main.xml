@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="LabelFor"
@@ -6,26 +7,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/result"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="100dp"
+        android:padding="30dp"
+        android:background="#08008000"
+        android:textSize="20sp" />
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="220dp"
+        android:background="#81008000"
         android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
             android:layout_toStartOf="@id/button"
             android:layout_toLeftOf="@id/button"
-            android:autofillHints=""
-            android:background="#6B4CAF50"
             android:hint="@string/tap_to_speak"
             android:inputType="textAutoCorrect"
+            android:background="#81008000"
             android:padding="10dp" />
 
         <ImageView
@@ -34,116 +43,45 @@
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:background="#4CAF50"
-            android:backgroundTint="#009688"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_mic_black_off"
-            tools:targetApi="lollipop" />
+            android:src="@drawable/ic_mic_black_off" />
     </RelativeLayout>
 
-    <!--
-    <LinearLayout
-        android:id="@+id/ctrls"
+<RelativeLayout
+    android:id="@+id/ctrls"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginTop="290dp"
+
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/vibrate_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="430dp"
-        android:backgroundTint="#8BC34A"
-        android:orientation="horizontal"
-        tools:targetApi="lollipop">
+        android:text="@string/vibrate" />
 
-        <Button
-            android:id="@+id/toMorseBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#FF5722"
-            android:text="@string/morse" />
-    </LinearLayout>
--->
-
-    <RelativeLayout
-        android:id="@+id/ctrls"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginRight="20dp">
-
-        <Button
-            android:id="@+id/vibrate_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="#00BCD4"
-            android:text="@string/vibrate" />
-
-        <Button
-            android:id="@+id/toMorseBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginLeft="150dp"
-            android:background="#FF5722"
-            android:text="@string/morse" />
-
-        <Button
-            android:id="@+id/flash_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="300dp"
-            android:layout_marginLeft="300dp"
-            android:background="#8BC34A"
-            android:text="@string/flash" />
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_width="match_parent"
-        android:layout_marginTop="130dp"
-        android:padding="30dp"
-        android:background="#74FFEB3B"
-        android:textSize="20sp" />
-
-<!--
-    <LinearLayout
+    <Button
+        android:id="@+id/flash_Button"
+        android:layout_marginLeft="81dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="530dp"
-        android:backgroundTint="#8BC34A"
-        android:orientation="horizontal"
-        tools:targetApi="lollipop">
+        android:text="@string/flash" />
 
-        <Button
-            android:id="@+id/vibrate_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00BCD4"
-            android:text="@string/vibrate" />
-    </LinearLayout>
--->
-<!--
-    <LinearLayout
+    <Button
+        android:id="@+id/sound_Button"
+        android:layout_marginLeft="162dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="630dp"
-        android:backgroundTint="#8BC34A"
-        android:orientation="horizontal"
-        tools:targetApi="lollipop">
+        android:text="@string/sound" />
 
-        <Button
-            android:id="@+id/flash_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#8BC34A"
-            android:text="@string/flash" />
-    </LinearLayout>
--->
+    <Button
+        android:id="@+id/toMorseBtn"
+        android:layout_marginLeft="245dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/morse" />
 
-
+</RelativeLayout>
 </RelativeLayout>
