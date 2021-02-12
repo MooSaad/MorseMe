@@ -4,5 +4,4 @@ A Morse Code converter application that takes text or speech-to-text input and c
 A school project for Human-Computer Interaction course in University of Grenoble-Alpes.
 
 A fully-functional generated APK is downloadable here (feel free to test it, it's secure and safe):
-https://file.io/yaJHAckS5YXX
-
+https://file.io/xDuXJIM4dCJu
